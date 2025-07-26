@@ -37,8 +37,21 @@
   }
 }
 
-.main{
+/* .main{
   max-width: 1320px;
   margin: auto;
   background-color: #61dafb;
+} */
+
+.row{
+  width: 1320px;
+  margin: auto;
+  flex-wrap: wrap;
+  display: flex;
+}
+.CardItems{
+  flex-basis: 23%;
+  background-color: aliceblue;
+  margin: 1%;
+  height: 200px;
 }
