@@ -13,6 +13,8 @@ function App() {
   let name="Wscubetech"
   return (
     <div className="main">
+      <Header headerInfo={headerInfo} cname="wscubetech"/>
+      <h1>welcome to Header Section</h1>
       <Header/>
       <Container fluid >
         <Container>
