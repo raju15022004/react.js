@@ -7,6 +7,7 @@ import { Row, Col } from 'react-bootstrap';
 // import { Row, Col } from 'antd';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Children } from 'react';
 
 
 function App() {
@@ -76,11 +77,26 @@ function App() {
           </Row>
         </Container>
       </Container>
+      <Container>
+        <Row>
+          <productionItem/>
+        </Row>
+      </Container>
+
       <Footer/>
     </div>
   );
 }
 
 export default App;
+
+function productionItem(){
+  return{
+    <>
+    child
+    </>
+
+  }
+}
 
 
