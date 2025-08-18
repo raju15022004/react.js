@@ -77,9 +77,10 @@ function App() {
           </Row>
         </Container>
       </Container>
-      <Container>
+       <Container>
         <Row>
-          <productionItem/>
+          <ProductionItems/>
+
         </Row>
       </Container>
 
@@ -90,13 +91,13 @@ function App() {
 
 export default App;
 
-function productionItem(){
-  return{
-    <>
-    child
-    </>
+function ProductionItems(){
+  return(
+     <>
+     child
+     </>
 
-  }
+  )
 }
 
 

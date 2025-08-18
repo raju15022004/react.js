@@ -1,4 +1,4 @@
-function Header(headerInfo,cname){
+function Header({headerInfo,cname,children}){
   // console.log(props)
   return(
     <div>
