@@ -8,18 +8,15 @@ import { Row, Col } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Children } from 'react';
-// // App.js
-// import { Header } from './Header';
-
 
 
 function App() {
-  const headerInfo = "This is Header Info";
+ const headerInfo = "This is Header Info";
   let name="Wscubetech"
   return (
     <div className="main">
       <Header headerInfo={headerInfo} cname="wscubetech"/>
-      <h1>welcome to Header Section</h1>
+      <h1>Welcome to Header Section</h1>
       <Header/>
       <Container fluid >
         <Container>
@@ -81,7 +78,13 @@ function App() {
           </Row>
         </Container>
       </Container>
-
+      <Container>
+        <Row>
+          <ProductItems/>
+          <ProductItems/>
+          <ProductItems/>
+        </Row>
+      </Container>
       <Footer/>
     </div>
   );
@@ -89,4 +92,11 @@ function App() {
 
 export default App;
 
+function ProductItems(){
+  return(
+    <Col lg="3" md="6">
+      Hello
+    </Col>
+  )
+}
 

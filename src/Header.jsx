@@ -1,11 +1,13 @@
-function Header(props){
-  let {headerInfo}=props;
+function Header(headerInfo,cname,children){
+  // let {headerInfo}=props;
   // console.log(props)
   return(
     <div>
-     <h1>Welcome to Header Section </h1>
-     <div>hello Wscubetech</div>
-     <div>hello wscubetech</div>
+      <h3>Header part</h3>
+      {children}
+      <h1> {headerInfo.email} {cname}</h1>
+
+
 </div>
   )
 }
