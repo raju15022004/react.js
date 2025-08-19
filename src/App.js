@@ -8,7 +8,7 @@ import { Row, Col } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Children } from 'react';
-
+import {blog} from './Data/blog';
 
 function App() {
  const headerInfo = "This is Header Info";
@@ -18,7 +18,7 @@ function App() {
       <Header headerInfo={headerInfo} cname="wscubetech"/>
       <h1>Welcome to Header Section</h1>
       <Header/>
-      <Container fluid >
+         <Container fluid >
         <Container>
           <Row>
             <Col className="col-12 text-center">
@@ -78,11 +78,15 @@ function App() {
           </Row>
         </Container>
       </Container>
+
       <Container>
         <Row>
-          <ProductItems/>
-          <ProductItems/>
-          <ProductItems/>
+          {blog.map((v,i)=>{
+            return(
+           <ProductItems pitems={v} key={i}/>
+            )
+          })}
+
         </Row>
       </Container>
       <Footer/>
@@ -92,10 +96,21 @@ function App() {
 
 export default App;
 
-function ProductItems(){
+function ProductItems({pitems}){
   return(
-    <Col lg="3" md="6">
-      Hello
+    <Col className="col-lg-3 mb-4">
+      <Card >
+      {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
+      <Card.Body>
+        <Card.Title>{pitems.Title}</Card.Title>
+        <Card.Text>
+          {pitems.body}
+          {/* Some quick example text to build on the card title and make up the
+          bulk of the card's content. */}
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
     </Col>
   )
 }
