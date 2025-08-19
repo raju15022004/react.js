@@ -8,9 +8,13 @@ import { Row, Col } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Children } from 'react';
+// // App.js
+// import { Header } from './Header';
+
 
 
 function App() {
+  const headerInfo = "This is Header Info";
   let name="Wscubetech"
   return (
     <div className="main">
@@ -77,12 +81,6 @@ function App() {
           </Row>
         </Container>
       </Container>
-       <Container>
-        <Row>
-          <ProductionItems/>
-
-        </Row>
-      </Container>
 
       <Footer/>
     </div>
@@ -90,14 +88,5 @@ function App() {
 }
 
 export default App;
-
-function ProductionItems(){
-  return(
-     <>
-     child
-     </>
-
-  )
-}
 
 
