@@ -9,6 +9,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Children } from 'react';
 import {blog} from './Data/blog';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function App() {
  const headerInfo = "This is Header Info";
@@ -17,6 +18,7 @@ function App() {
     <div className="main">
       <Header headerInfo={headerInfo} cname="wscubetech"/>
       <h1>Welcome to Header Section</h1>
+      <FontAwesomeIcon/>
       <Header/>
          <Container fluid >
         <Container>
