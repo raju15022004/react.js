@@ -14,16 +14,16 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
- const headerInfo = "This is Header Info";
-  let name="Wscubetech"
+//  const headerInfo = "This is Header Info";
+//   let name="Wscubetech"
   return (
     <div className="main">
-      <Header headerInfo={headerInfo} cname="wscubetech"/>
+     <Header headerInfo={headerInfo} cname="wscubetech"/>
       <h1>Welcome to Header Section</h1>
       <FontAwesomeIcon icon={faWhatsapp} className='text-danger'/>
       <FontAwesomeIcon icon={faPhone} className='text-danger'/>
       <Header/>
-         <Container fluid >
+        <Container fluid >
         <Container>
           <Row>
             <Col className="col-12 text-center">
@@ -33,7 +33,6 @@ function App() {
           <Row>
             <Col lg="3" md="6">
              <Card style={{ width: '18rem' }}>
-      {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
       <Card.Body>
         <Card.Title>Card Title</Card.Title>
         <Card.Text>
@@ -101,22 +100,4 @@ function App() {
 
 export default App;
 
-function ProductItems({pitems}){
-  return(
-    <Col className="col-lg-3 mb-4">
-      <Card >
-      {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
-      <Card.Body>
-        <Card.Title>{pitems.Title}</Card.Title>
-        <Card.Text>
-          {pitems.body}
-          {/* Some quick example text to build on the card title and make up the
-          bulk of the card's content. */}
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-    </Col>
-  )
-}
 
