@@ -10,90 +10,21 @@ import Card from 'react-bootstrap/Card';
 import { Children } from 'react';
 import {blog} from './Data/blog';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
+// import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+// import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
 //  const headerInfo = "This is Header Info";
 //   let name="Wscubetech"
   return (
     <div className="main">
-     <Header headerInfo={headerInfo} cname="wscubetech"/>
-      <h1>Welcome to Header Section</h1>
-      <FontAwesomeIcon icon={faWhatsapp} className='text-danger'/>
-      <FontAwesomeIcon icon={faPhone} className='text-danger'/>
-      <Header/>
-        <Container fluid >
-        <Container>
-          <Row>
-            <Col className="col-12 text-center">
-            <h1>our Courses</h1>
-            </Col>
-          </Row>
-          <Row>
-            <Col lg="3" md="6">
-             <Card style={{ width: '18rem' }}>
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-            </Col>
-            <Col lg="3" md="6">
-            <Card style={{ width: '18rem' }}>
-      {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card></Col>
-            <Col lg="3" md="6">
-            <Card style={{ width: '18rem' }}>
-      {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card></Col>
-            <Col lg="3" md="6">
-            <Card style={{ width: '18rem' }}>
-      {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card></Col>
-          </Row>
-        </Container>
-      </Container>
+   <button className='bg-[red] p-[10px]'>Save</button>
+   <img width={200} src={weblogo}></img>
 
-      <Container>
-        <Row>
-          {blog.map((v,i)=>{
-            return(
-           <ProductItems pitems={v} key={i}/>
-            )
-          })}
+   <img src={aboutImg}></img>
+   <Header/>
+   <h1 className='text-[40] text-red-900 font-bold'>welcome to ws</h1>
 
-        </Row>
-      </Container>
-      <Footer/>
     </div>
   );
 }
