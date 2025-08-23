@@ -55,3 +55,11 @@
   margin: 1%;
   height: 200px;
 }
+
+.para{
+  background-color: red;
+  padding: 10px;
+  width: 1000px;
+  margin: auto;
+  text-align: left;
+}
