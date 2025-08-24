@@ -21,11 +21,33 @@ function App() {
 //  const headerInfo = "This is Header Info";
 //   let name="Wscubetech"
  let [status,setStatus]=useState(false);
-let [pstatus,setPstatus]=useState(false)
+let [pstatus,setPstatus]=useState(false);
+let [modalstatus,setModalstatus]=useState(false)
+let [menuStatus,setMenuStatus]=useState(false)
 
 
   return (
 <div className='App'>
+  <button className='micon' onClick={()=>setMenuStatus(!menuStatus)}>
+  {
+    menuStatus ?
+    <span>&times;</span>
+    :
+    <span>&#9776;</span>
+  }
+
+    </button>
+
+  <div className={`menu ${menuStatus ? 'activeMenu' : ''}`}>
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Course</li>
+      <li>Gallery</li>
+      <li>Contact</li>
+    </ul>
+
+  </div>
   <input type={pstatus ? 'text':'password'}/>
   <button onClick={()=>setPstatus(!pstatus)}>{pstatus ? 'Hide':'show'}</button>
   <br/>
