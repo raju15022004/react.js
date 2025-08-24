@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './Header';
 import { useState } from 'react';
+import btnModule from "./Button.module.css"
 // import Footer from './Footer';
 // import {Container} from 'react-bootstrap';
 // import { Row, Col } from 'react-bootstrap';
@@ -19,9 +20,17 @@ import { useState } from 'react';
 function App() {
 //  const headerInfo = "This is Header Info";
 //   let name="Wscubetech"
-let [status,setStatus]=useState(false);
+ let [status,setStatus]=useState(false);
+let [pstatus,setPstatus]=useState(false)
+
+
   return (
 <div className='App'>
+  <input type={pstatus ? 'text':'password'}/>
+  <button onClick={()=>setPstatus(!pstatus)}>{pstatus ? 'Hide':'show'}</button>
+  <br/>
+  <button className={btnModule.error}>Error</button>
+  <button className={btnModule.warning}>Demo</button>
   <button onClick={()=>setStatus(!status)}>
   {(status)? 'Hide':'Show'}
   </button>
