@@ -28,6 +28,10 @@ let [menuStatus,setMenuStatus]=useState(false)
 
   return (
 <div className='App'>
+  <div className='modalOverLay'></div>
+  <div className='ModalDiv'>
+    <h3>Enquiry Now</h3>
+  </div>
   <button className='micon' onClick={()=>setMenuStatus(!menuStatus)}>
   {
     menuStatus ?
