@@ -3,6 +3,8 @@ import './App.css';
 import Header from './Header';
 import { useState } from 'react';
 import btnModule from "./Button.module.css"
+import { questions, showAns } from "./data";
+
 // import Footer from './Footer';
 // import {Container} from 'react-bootstrap';
 // import { Row, Col } from 'react-bootstrap';
@@ -37,9 +39,8 @@ let [menuStatus,setMenuStatus]=useState(false)
         return(
 
       <div className='faqItems'>
-        <h2>Free AI FAQ Generator</h2>
-        <p>Toolsaday AI FAQ Generator is a powerful tool that can help website owners generate FAQs without the need for human input. This AI-driven tool relies on advanced algorithms and natural language processing to analyze website content, identify common questions, and generate succinct answers</p>
-
+        <h2>{faqItems.question}</h2>
+        <p className={showAns==faqItems.id ? 'activeAns':''}>{faqItems.answer}</p>
       </div>
         )
        }

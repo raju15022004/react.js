@@ -144,12 +144,13 @@
 .faqItems p{
   text-align: left;
   padding:10px;
+  transition: 0.5s;
   margin: 0px;
   transform: scaleY(0);
   padding: 0px;
 }
 
-activeAns{
+.activeAns{
   height: auto !important;
   transform: scaleY(1) !important;
   padding: 10px !important;
