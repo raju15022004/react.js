@@ -20,18 +20,38 @@ import btnModule from "./Button.module.css"
 function App() {
 //  const headerInfo = "This is Header Info";
 //   let name="Wscubetech"
- let [status,setStatus]=useState(false);
+let [status,setStatus]=useState(false);
 let [pstatus,setPstatus]=useState(false);
 let [modalstatus,setModalstatus]=useState(false)
 let [menuStatus,setMenuStatus]=useState(false)
+// let [modalstatus,setModalstatus]=useState(false)
 
 
   return (
 <div className='App'>
-  <div className='modalOverLay'></div>
-  <div className='ModalDiv'>
-    <h3>Enquiry Now</h3>
+  <div>
+    <h1>Frequently Asked Question(FAQs)</h1>
+    <div className='faqouter'>
+      {
+       questions.map((faqItems,i)=>{
+        return(
+
+      <div className='faqItems'>
+        <h2>Free AI FAQ Generator</h2>
+        <p>Toolsaday AI FAQ Generator is a powerful tool that can help website owners generate FAQs without the need for human input. This AI-driven tool relies on advanced algorithms and natural language processing to analyze website content, identify common questions, and generate succinct answers</p>
+
+      </div>
+        )
+       }
+      )
+      }
+    </div>
   </div>
+  {/* <button className='en' onClick={()=>setModalstatus(true)}>Enquiry Now</button>
+  <div onClick={()=>setModalstatus(false)}className={`modalOverLay ${modalstatus?'modalShow':''}`}></div>
+  <div className={`ModalDiv ${modalstatus?'showModalDiv':''}`}>
+    <h3>Enquiry Now <span onClick={()=>setModalstatus(false)}>&times;</span></h3>
+  </div> */}
   <button className='micon' onClick={()=>setMenuStatus(!menuStatus)}>
   {
     menuStatus ?

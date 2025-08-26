@@ -97,13 +97,60 @@
   background-color: rgba(0,0,0,0.5);
 }
 
+.modalShow{
+  display: block;
+}
+
 .ModalDiv{
   width: 320px;
   position: fixed;
   height: 320px;
   left: 50%;
   transition: 0.3%;
-   top: -500px; 
+   top: -500px;
   transform: translate(-50%,-50%);
   background-color: white;
+}
+
+.showModalDiv{
+  top: 50%;
+}
+
+.en{
+  position: fixed;
+  right: -30px;
+  top: 100px;
+  transform: rotate(90deg);
+}
+
+.faqouter{
+  width: 1320px;
+  margin: auto;
+}
+
+.faqItems{
+  border: 1px solid red;
+  margin-bottom: 20px;
+}
+
+.faqItems h2{
+  margin: 0px;
+  padding:10px;
+  background-color: #282c34;
+  color: white;
+  text-align: left;
+}
+
+.faqItems p{
+  text-align: left;
+  padding:10px;
+  margin: 0px;
+  transform: scaleY(0);
+  padding: 0px;
+}
+
+activeAns{
+  height: auto !important;
+  transform: scaleY(1) !important;
+  padding: 10px !important;
 }
