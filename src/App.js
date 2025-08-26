@@ -3,7 +3,8 @@ import './App.css';
 import Header from './Header';
 import { useState } from 'react';
 import btnModule from "./Button.module.css"
-import { questions, showAns } from "./data";
+// import { ReactNotifications, Store } from 'react-notifications-component'
+import 'react-notifications-component/dist/theme.css'
 
 // import Footer from './Footer';
 // import {Container} from 'react-bootstrap';
@@ -20,39 +21,16 @@ import { questions, showAns } from "./data";
 
 
 function App() {
-//  const headerInfo = "This is Header Info";
-//   let name="Wscubetech"
 let [status,setStatus]=useState(false);
 let [pstatus,setPstatus]=useState(false);
 let [modalstatus,setModalstatus]=useState(false)
 let [menuStatus,setMenuStatus]=useState(false)
-// let [modalstatus,setModalstatus]=useState(false)
-
 
   return (
 <div className='App'>
-  <div>
-    <h1>Frequently Asked Question(FAQs)</h1>
-    <div className='faqouter'>
-      {
-       questions.map((faqItems,i)=>{
-        return(
+  {/* <NotificationContainer/> */}
+  <button>Save</button>
 
-      <div className='faqItems'>
-        <h2>{faqItems.question}</h2>
-        <p className={showAns==faqItems.id ? 'activeAns':''}>{faqItems.answer}</p>
-      </div>
-        )
-       }
-      )
-      }
-    </div>
-  </div>
-  {/* <button className='en' onClick={()=>setModalstatus(true)}>Enquiry Now</button>
-  <div onClick={()=>setModalstatus(false)}className={`modalOverLay ${modalstatus?'modalShow':''}`}></div>
-  <div className={`ModalDiv ${modalstatus?'showModalDiv':''}`}>
-    <h3>Enquiry Now <span onClick={()=>setModalstatus(false)}>&times;</span></h3>
-  </div> */}
   <button className='micon' onClick={()=>setMenuStatus(!menuStatus)}>
   {
     menuStatus ?
