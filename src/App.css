@@ -155,3 +155,17 @@
   transform: scaleY(1) !important;
   padding: 10px !important;
 }
+
+form{
+  width: 1170px;
+  margin: auto;
+  display: flex;
+  gap: 20px;
+}
+form input{
+  height: 40px;
+  flex-basis: 80%;
+}
+form button{
+  flex-basis: 20%;
+}

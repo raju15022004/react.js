@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './Header';
-// import { useState } from 'react';
+ import { useState } from 'react';
 // import btnModule from "./Button.module.css"
 // import { ReactNotifications, Store } from 'react-notifications-component'
 // import 'react-notifications-component/dist/theme.css'
@@ -22,11 +22,6 @@ import Header from './Header';
 
 function App() {
 
-// let [status,setStatus]=useState(false);
-// let [pstatus,setPstatus]=useState(false);
-// let [modalstatus,setModalstatus]=useState(false)
-// let [menuStatus,setMenuStatus]=useState(false)
-
 let [todolist,setToDolist]=useState([])
 
   let saveToDoList=(event)=>{
@@ -44,7 +39,7 @@ let [todolist,setToDolist]=useState([])
   }
 
   return (
-    <div>
+    <div className='App'>
       <h1>ToDO List</h1>
       <form onSubmit={saveToDoList}>
         <input type="text" name='toname'/><button>Save</button>
