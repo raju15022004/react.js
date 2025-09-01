@@ -48,7 +48,7 @@ let [todolist,setToDolist]=useState([])
 
   return (
     <div className='App'>
-      <h1>ToDO List</h1>
+      <h1>ToDo List</h1>
       <form onSubmit={saveToDoList}>
         <input type="text" name='toname'/>
         <button type='submit'>Save</button>
