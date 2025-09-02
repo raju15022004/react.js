@@ -55,6 +55,10 @@ function App() {
     }
   }
 
+  let copyPass=()=>{
+    navigator.clipboard.writeText(fPass)
+  }
+
   return(
     <>
     <div className='passwordBox'>
