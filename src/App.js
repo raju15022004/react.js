@@ -19,27 +19,38 @@ import { useState } from 'react';
 // import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 // import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
+const UC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const LC = "abcdefghijklmnopqrstuvwxyz";
+const NC = "0123456789";
+const SC = "!@#$%^&*()_+~`|}{[]:;?><,./-=";
 
 
 function App() {
+  let p="Wscubetech";
 
   let[uppercase,setUppercase]=useState(false)
   let[lowercase,setLowercase]=useState(false)
   let[number,setNumber]=useState(false)
   let[symbols,setSymbols]=useState(false)
+  let[passwordlen,setPasswordLen]=useState(10)
 
   let createPassword=()=>{
-    let charSet=''
-    if(uppercase || lowercase || number || symbols){
-      if(uppercase) charSet==UC;
-      if(lowercase) charSet==LC;
-      if(number) charSet==NC;
-      if(symbols) charSet==SC;
-      console.log(charSet)
+    let finalPass='';
+    let charSet = '';
+    if (uppercase || lowercase || number || symbols) {
+      if (uppercase) charSet += UC;
+      if (lowercase) charSet += LC;
+      if (number) charSet += NC;
+      if (symbols) charSet += SC;
+      for(let i=0;i=passwordlen;i++){
+        finalPass+=charSet.charAt(Math.floor(Math.random()*charSet.length))
+      }
+      console.log(finalPass);
+
 
     }
     else{
-      alert("Plase one CheckBox!.....")
+       alert("Plase one CheckBox!.....")
     }
   }
 
@@ -56,7 +67,7 @@ function App() {
 
     <div className='passlengh'>
       <lable>Password Length</lable>
-      <input type='number' />
+      <input type='number'max={20} min={10} value={passwordlen} onChange={(event)=>setPasswordLen(event.target.value)} />
     </div>
 
     <div className='passlengh'>
