@@ -33,6 +33,7 @@ function App() {
   let[number,setNumber]=useState(false)
   let[symbols,setSymbols]=useState(false)
   let[passwordlen,setPasswordLen]=useState(10)
+  let[fPass,setPass]=useState('')
 
   let createPassword=()=>{
     let finalPass='';
@@ -45,7 +46,7 @@ function App() {
       for(let i=0;i=passwordlen;i++){
         finalPass+=charSet.charAt(Math.floor(Math.random()*charSet.length))
       }
-      console.log(finalPass);
+      setPass(finalPass);
 
 
     }
@@ -60,7 +61,7 @@ function App() {
     <h2>Password Generator</h2>
 
     <div className='passwordBoxin'>
-      <input type='text' readOnly/>
+      <input type='text' value={fPass} readOnly/>
       <button>Copy</button>
 
     </div>
