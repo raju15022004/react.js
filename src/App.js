@@ -1,7 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import person from './Components/person';
  import Header from './Header';
-import Category from './Category';
+
+
+// import Category from './Category';
 // import { useState } from 'react';
 
 //  import btnModule from "./Button.module.css"
@@ -21,14 +24,15 @@ import Category from './Category';
 // import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 
-
-
 function App() {
 
   return(
-    <>
-    <Category/>
-    </>
+  //  <div className='App'>
+  //   <person/>
+  //  </div>
+  <>
+   <person/>
+  </>
 
   );
 }
